@@ -1,0 +1,11 @@
+server:
+  port: 8762 #指定该eureka实例的端口号
+
+eureka:
+  instance:
+    hostname: peer2 #指定该eureka实例的主机名
+  client:
+#    registerWithEureka: false
+#    fecthRegistry: false
+    serviceUrl:
+      defauleZone: http://peer1:8761/eureka/

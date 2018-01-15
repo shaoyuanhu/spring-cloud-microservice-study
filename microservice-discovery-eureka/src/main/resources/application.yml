@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: dev
+#---
+#spring:
+#  profiles: peer1
+#server:
+#  port: 8761 #指定该eureka实例的端口号
+#eureka:
+#  instance:
+#    hostname: peer1 #指定该eureka实例的主机名
+#  client:
+#    serviceUrl:
+#      defauleZone: http://peer2:8762/eureka/
+#
+#---
+#spring:
+#  profiles: peer2
+#server:
+#  port: 8762 #指定该eureka实例的端口号
+#eureka:
+#  instance:
+#    hostname: peer2 #指定该eureka实例的主机名
+#  client:
+#    serviceUrl:
+#      defauleZone: http://peer1:8761/eureka/
