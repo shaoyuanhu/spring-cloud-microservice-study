@@ -6,7 +6,8 @@ spring:
     name: microservice-consumer-movie-feign-with-hystrix #项目名称，尽量使用小写
 eureka:
   instance:
-    preferIpAddress: true
+    hostname: feign
+    preferIpAddress: false
   client:
     serviceUrl:
       defauleZone: http://discovery:8761/eureka/  #指定注册中心地址

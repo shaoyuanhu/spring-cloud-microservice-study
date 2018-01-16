@@ -15,6 +15,8 @@
 		<module>microservice-consumer-movie-feign</module>
 		<module>microservice-consumer-movie-ribbon-with-hystrix</module>
 		<module>microservice-consumer-movie-feign-with-hystrix</module>
+		<module>microservice-hystrix-dashboard</module>
+		<module>microservice-hystrix-turbine</module>
 	</modules>
 
 	<name>spring-cloud-microservice-study</name>

@@ -1,0 +1,17 @@
+server:
+  port: 8031 #指定该eureka实例的端口号
+
+spring:
+  application:
+    name: microservice-hystrix-turbine #项目名称，尽量使用小写
+security.basic.enabled: false
+turbine:
+  aggregator:
+    clusterConfig: default #指定聚合哪些集群，多个使用","分隔，默认为default。
+  appConfig: microservice-consumer-movie-feign-with-hystrix,microservice-consumer-movie-ribbon-with-hystrix
+  #配置Eureka中的serviceId列表，表名要监控哪些服务
+  clusterNameExpression: new String("default")
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/

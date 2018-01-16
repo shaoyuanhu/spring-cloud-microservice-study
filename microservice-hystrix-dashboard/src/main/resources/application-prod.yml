@@ -1,0 +1,6 @@
+server:
+  port: 8030 #指定该eureka实例的端口号
+
+spring:
+  application:
+    name: hystrix-dashboard #项目名称，尽量使用小写
