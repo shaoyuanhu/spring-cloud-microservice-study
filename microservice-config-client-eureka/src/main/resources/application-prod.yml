@@ -1,0 +1,2 @@
+server:
+  port: 8051 #指定该eureka实例的端口号

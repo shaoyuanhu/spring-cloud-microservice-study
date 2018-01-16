@@ -17,6 +17,10 @@
 		<module>microservice-consumer-movie-feign-with-hystrix</module>
 		<module>microservice-hystrix-dashboard</module>
 		<module>microservice-hystrix-turbine</module>
+		<module>microservice-config-server</module>
+		<module>microservice-config-client</module>
+		<module>microservice-config-server-eureka</module>
+		<module>microservice-config-client-eureka</module>
 	</modules>
 
 	<name>spring-cloud-microservice-study</name>

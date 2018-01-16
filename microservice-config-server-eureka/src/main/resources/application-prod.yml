@@ -1,0 +1,18 @@
+server:
+  port: 8050 #指定该eureka实例的端口号
+
+spring:
+  application:
+    name: microservice-config-server-eureka #项目名称，尽量使用小写
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/shaoyuanhu/spring-cloud-microservice-study/ #配置git仓库地址
+          search-paths: config-repo #git仓库地址下的相对地址，可以配置多个，用","隔开
+          username: 17600147918@163.com
+          password: syh790524
+eureka:
+  client:
+    serviceUrl:
+      defauleZone: http://discovery:8761/eureka/  #指定注册中心地址
