@@ -4,27 +4,17 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.shaoyuanhu</groupId>
-	<artifactId>spring-cloud-microservice-study</artifactId>
+	<artifactId>microservice-consumer-movie-ribbon-with-hystrix</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 
-	<modules>
-		<module>microservice-discovery-eureka</module>
-		<module>microservice-provider-uesr</module>
-		<module>microservice-consumer-movie-ribbon</module>
-		<module>microservice-consumer-movie-feign</module>
-		<module>microservice-consumer-movie-ribbon-with-hystrix</module>
-		<module>microservice-consumer-movie-feign-with-hystrix</module>
-	</modules>
-
-	<name>spring-cloud-microservice-study</name>
-	<description>Demo project for Spring Cloud</description>
+	<name>microservice-consumer-movie-ribbon-with-hystrix</name>
+	<description>Demo project for Spring Boot</description>
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.9.RELEASE</version>
-		<relativePath/>
+		<artifactId>spring-cloud-microservice-study</artifactId>
+		<groupId>com.shaoyuanhu</groupId>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
 	<properties>
@@ -41,22 +31,30 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Dalston.SR1</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-ribbon</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix</artifactId>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>
