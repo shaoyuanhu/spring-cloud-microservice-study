@@ -29,6 +29,10 @@ public class UserController {
         return user;
     }
 
+    /**
+     * 返回本地服务实例的信息
+     * @return
+     */
     @RequestMapping("/showInfo")
     public ServiceInstance showInfo(){
         ServiceInstance serviceInstance = discoveryClient.getLocalServiceInstance();

@@ -6,6 +6,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * 启动类
+ * @EnableDiscoveryClient: 使用该注解将本服务注册到Eureka上去
  */
 @SpringBootApplication
 @EnableDiscoveryClient

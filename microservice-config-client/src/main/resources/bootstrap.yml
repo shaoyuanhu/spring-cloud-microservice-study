@@ -1,6 +1,9 @@
+#bootstrap.yml文件中的内容不能放到application.yml中，否则config部分无法加载，
+#因为config部分的配置需要优先于application.yml加载，而bootstrap.yml文件优先于application.yml加载，正好满足需求
+#bootstrap.yml和application.yml都可以配置属性，前者用于配置服务器属性，后者用于配置应用属性，前者优先于后者加载，若配置相同属性，存在后者覆盖前者情况
 spring:
   application:
-    name: microservice-config-client
+    name: microservice-config-client #对应microservice-config-server所获取的配置文件中的{application}
   cloud:
     config:
       uri: http://config-server:8040/

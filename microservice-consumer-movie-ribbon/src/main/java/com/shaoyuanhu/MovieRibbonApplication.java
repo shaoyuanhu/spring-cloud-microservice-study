@@ -7,6 +7,9 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * @EnableDiscoveryClient: 使用该注解将本服务注册到Eureka上去
+ */
 @SpringBootApplication
 @EnableDiscoveryClient
 public class MovieRibbonApplication {

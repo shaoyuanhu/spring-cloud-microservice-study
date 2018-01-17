@@ -20,12 +20,22 @@ public class RibbonHystrixService {
     @Autowired
     private RestTemplate restTemplate;
 
+    /**
+     * 使用@HystrixCommand(fallbackMethod = "fallback")注解指定当该方法发生异常时调用的方法
+     * @param id
+     * @return
+     */
     @HystrixCommand(fallbackMethod = "fallback")
     public User findById(Long id){
         User user = restTemplate.getForObject("http://microservice-provider-uesr/" + id, User.class);
         return user;
     }
 
+    /**
+     * Hystrix的fallback方法
+     * @param id
+     * @return
+     */
     public User fallback(Long id){
         LOGGER.info("发生异常，进入fallback方法，参数：id = {}",id);
         User user = new User();

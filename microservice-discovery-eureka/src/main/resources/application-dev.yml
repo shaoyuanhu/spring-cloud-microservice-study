@@ -1,11 +1,23 @@
+#---------单机版----------
 server:
   port: 8761 #指定该eureka实例的端口号
-
 eureka:
   instance:
     hostname: discovery #指定该eureka实例的主机名
   client:
+
     register-with-eureka: false
+    #设置是否从注册中心获取注册信息，默认true
     fecth-registry: false
     serviceUrl:
       defauleZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+#---------高可用版本----------
+#server:
+#  port: 8761 #指定该eureka实例的端口号
+#eureka:
+#  instance:
+#    hostname: peer1 #指定该eureka实例的主机名
+#  client:
+#    serviceUrl:
+#      defauleZone: http://peer2:8762/eureka/ #将自己注册到peer2这个Eureka实例上

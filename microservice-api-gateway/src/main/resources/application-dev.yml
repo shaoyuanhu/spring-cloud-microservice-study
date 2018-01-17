@@ -1,0 +1,22 @@
+server:
+  port: 8060 #指定该eureka实例的端口号
+
+spring:
+  application:
+    name: microservice-api-gateway #项目名称，尽量使用小写
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: gateway
+  client:
+    serviceUrl:
+      defauleZone: http://discovery:8761/eureka/  #指定注册中心地址
+#zuul树非必须，如果不配置，默认使用http://gateway:gateway_port/想要访问的eureka服务id的小写/** 路由到：http://想要访问的eureka服务id的小写:该服务端口/**
+zuul:
+  routes:
+    user:
+      #自定义名称，在zuul上唯一即可，当这里的值path=要访问的eureka服务id的小写时，service-id可以不写
+      #现在不配置service-id有问题，报500，暂未找到原因
+      path: /microservice-provider-user/**
+      #Eureka中的serviceId
+      service-id: microservice-provider-user

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @Description:
+ * @Description: 这里的@RefreshScope注解一定不能少，否则即使调用/refresh，配置也不会刷新
  * @Author: ShaoYuanHu
  * @Date: Created in 2018-01-16
  */

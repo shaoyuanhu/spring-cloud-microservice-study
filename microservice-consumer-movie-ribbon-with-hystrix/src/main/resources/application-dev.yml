@@ -6,7 +6,8 @@ spring:
     name: microservice-consumer-movie-ribbon-with-hystrix #项目名称，尽量使用小写
 eureka:
   instance:
-    hostname: ribbon
+    hostname: ribbon #此处，preferIpAddress不设置或者设置为false，不能为true，否则影响turbine的测试。
+    #turbine存在问题：eureka.instance.hostname一致时只能检测到一个节点，会造成turbine数据不完整
   client:
     serviceUrl:
       defauleZone: http://discovery:8761/eureka/  #指定注册中心地址

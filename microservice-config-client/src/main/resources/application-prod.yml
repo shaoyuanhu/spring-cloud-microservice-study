@@ -1,2 +1,3 @@
 server:
   port: 8041 #指定该eureka实例的端口号
+management.security.enabled: false #忽略权限拦截，否则调用/refresh会401

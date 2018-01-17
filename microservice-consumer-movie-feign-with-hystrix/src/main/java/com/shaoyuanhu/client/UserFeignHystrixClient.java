@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * @Description:
+ * @Description: 使用@FeignClient注解的fallback属性，指定fallback类
  * @Author: ShaoYuanHu
  * @Date: Created in 2018-01-15
  */
@@ -16,6 +16,9 @@ public interface UserFeignHystrixClient {
     @RequestMapping("/{id}")
     public User findByIdFeign(@RequestParam("id") Long id);
 
+    /**
+     * 将fallback类作为内部类放入client中，也可以单独写一个fallback类
+     */
     /*@Component
     static class HystrixClientFallback implements UserFeignHystrixClient {
         private static final Logger LOGGER = LoggerFactory.getLogger(HystrixClientFallback.class);

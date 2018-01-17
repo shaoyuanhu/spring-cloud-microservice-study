@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: microservice-provider-uesr #项目名称，尽量使用小写
+    name: microservice-provider-user #项目名称，尽量使用小写
   jpa:
     generate-ddl: false
     show-sql: true
