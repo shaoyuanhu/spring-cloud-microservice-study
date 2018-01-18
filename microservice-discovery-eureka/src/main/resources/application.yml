@@ -1,3 +1,32 @@
 spring:
   profiles:
     active: dev #使用application-${spring.profiles.active}.yml配置文件运行
+
+#---------高可用版本----------
+#---
+#spring:
+#  profiles: peer1 #指定profile=peer1
+#  application:
+#    name: microservice-discovery-eureka
+#server:
+#  port: 8761 #注册服务的端口号
+#eureka:
+#  instance:
+#    hostname: peer1 #指定当profile=peer1时，主机名
+#  client:
+#    serviceUrl:
+#      defaultZone: http://peer2:8762/eureka/ #将自己注册到peer2这个Eureka上面去
+#
+#---
+#spring:
+#  profiles: peer2
+#  application:
+#    name: microservice-discovery-eureka
+#server:
+#  port: 8762
+#eureka:
+#  instance:
+#    hostname: peer2
+#  client:
+#    serviceUrl:
+#      defaultZone: http://peer1:8761/eureka/  # 服务注册地址，将自己注册到peer1上去

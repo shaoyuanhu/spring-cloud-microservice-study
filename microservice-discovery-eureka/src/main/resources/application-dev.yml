@@ -11,13 +11,3 @@ eureka:
     fecth-registry: false
     serviceUrl:
       defauleZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-
-#---------高可用版本----------
-#server:
-#  port: 8761 #指定该eureka实例的端口号
-#eureka:
-#  instance:
-#    hostname: peer1 #指定该eureka实例的主机名
-#  client:
-#    serviceUrl:
-#      defauleZone: http://peer2:8762/eureka/ #将自己注册到peer2这个Eureka实例上
