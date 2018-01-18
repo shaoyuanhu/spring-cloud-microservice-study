@@ -10,8 +10,8 @@ spring:
         git:
           uri: https://github.com/shaoyuanhu/spring-cloud-microservice-study/ #配置git仓库地址
           search-paths: config-repo #git仓库地址下的相对地址，可以配置多个，用","隔开
-          username: 17600147918@163.com
-          password: syh790524
+          username: ****
+          password: ****
 eureka:
   client:
     serviceUrl:
