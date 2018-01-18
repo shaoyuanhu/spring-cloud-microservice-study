@@ -13,10 +13,13 @@ eureka:
       defauleZone: http://discovery:8761/eureka/  #指定注册中心地址
 #zuul树非必须，如果不配置，默认使用http://gateway:gateway_port/想要访问的eureka服务id的小写/** 路由到：http://想要访问的eureka服务id的小写:该服务端口/**
 zuul:
+  ignored-services: microservice-provider-user #需要忽略的服务，配置后将不会被路由
   routes:
-    user:
-      #自定义名称，在zuul上唯一即可，当这里的值path=要访问的eureka服务id的小写时，service-id可以不写
-      #现在不配置service-id有问题，报500，暂未找到原因
-      path: /microservice-provider-user/**
+    #自定义名称，在zuul上唯一即可，当这里的值=要访问的eureka服务id的小写时，service-id可以不写
+    microservice-provider-user:
+      path: /user/**
       #Eureka中的serviceId
-      service-id: microservice-provider-user
+#      service-id: microservice-provider-user
+    movie:
+      path: /movie/**
+      service-id: microservice-consumer-movie-ribbon

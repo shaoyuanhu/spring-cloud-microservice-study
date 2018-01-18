@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Author: ShaoYuanHu
  * @Date: Created in 2018-01-15
  */
-@FeignClient(name = "microservice-provider-uesr" ,fallback = HystrixClientFallback.class)
+@FeignClient(name = "microservice-provider-user" ,fallback = HystrixClientFallback.class)
 public interface UserFeignHystrixClient {
 
     @RequestMapping("/{id}")

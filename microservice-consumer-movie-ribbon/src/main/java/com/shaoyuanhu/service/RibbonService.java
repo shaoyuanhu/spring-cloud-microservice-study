@@ -18,7 +18,7 @@ public class RibbonService {
 
     public User findById(Long id){
         //第一个参数为： http://服务提供者的serviceId/restUrl
-        User user = restTemplate.getForObject("http://microservice-provider-uesr/" + id, User.class);
+        User user = restTemplate.getForObject("http://microservice-provider-user/" + id, User.class);
         return user;
     }
 
